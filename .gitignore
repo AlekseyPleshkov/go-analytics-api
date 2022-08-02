@@ -1,0 +1,5 @@
+.vscode
+go.sum
+config.yml
+*.code-workspace
+__debug_bin
