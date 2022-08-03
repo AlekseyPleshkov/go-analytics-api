@@ -7,8 +7,8 @@ It's small analytics microservice for storing data to db.
 ## Plans
 
 - [x] Basic structure
+- [x] Requests validation
 - [ ] Unit tests
-- [ ] Requests validation
 - [ ] Request for get filtered data
 - [ ] Analytics visualisation (graphs)
 
