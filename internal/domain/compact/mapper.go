@@ -7,9 +7,13 @@ import (
 	"gorm.io/datatypes"
 )
 
-func mapModelToStoreScheme(model *Compact) *data.Compact {
+var timeNow = func() time.Time {
+	return time.Now()
+}
+
+func mapModelToScheme(model *Compact) *data.Compact {
 	return &data.Compact{
-		CreatedAt: time.Now(),
+		CreatedAt: timeNow(),
 		UserID:    model.UserID,
 		Platform:  model.Platform,
 		Data:      datatypes.JSON(model.Data),

@@ -17,7 +17,7 @@ func NewService(store data.Store) Service {
 }
 
 func (s *service) Create(model *Compact) (*Compact, error) {
-	scheme := mapModelToStoreScheme(model)
+	scheme := mapModelToScheme(model)
 	if _, err := s.store.Create(scheme); err != nil {
 		return nil, err
 	}

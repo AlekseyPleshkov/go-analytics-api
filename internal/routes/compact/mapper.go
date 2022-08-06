@@ -16,5 +16,5 @@ func mapRequestToModel(req *request) (*domain.Compact, error) {
 		UserID:   req.UserID,
 		Platform: req.Platform,
 		Data:     string(json),
-	}, err
+	}, nil
 }

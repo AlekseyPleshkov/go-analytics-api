@@ -18,6 +18,7 @@ func tokenMiddlewere(token string) func(c *gin.Context) {
 		if headerToken != token {
 			c.JSON(http.StatusUnauthorized, errors.NewError(errors.NotValidToken, nil))
 			c.Abort()
+			return
 		}
 
 		c.Next()

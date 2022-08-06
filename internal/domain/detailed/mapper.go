@@ -8,6 +8,10 @@ import (
 	"gorm.io/datatypes"
 )
 
+var timeNow = func() time.Time {
+	return time.Now()
+}
+
 func mapModelToScheme(model *Detailed) *data.Detailed {
 	category := sql.NullString{
 		String: model.Category,
@@ -19,7 +23,7 @@ func mapModelToScheme(model *Detailed) *data.Detailed {
 	}
 
 	return &data.Detailed{
-		CreatedAt:   time.Now(),
+		CreatedAt:   timeNow(),
 		UserID:      model.UserID,
 		Platform:    model.Platform,
 		Event:       model.Event,

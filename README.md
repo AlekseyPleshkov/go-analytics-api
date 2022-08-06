@@ -8,7 +8,7 @@ It's small analytics microservice for storing data to db.
 
 - [x] Basic structure
 - [x] Requests validation
-- [ ] Unit tests
+- [x] Unit tests (partial coverage)
 - [ ] Request for get filtered data
 - [ ] Analytics visualisation (graphs)
 
