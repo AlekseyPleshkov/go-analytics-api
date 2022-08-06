@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	configFile = "../config.yml"
+	configFile = "config.yml"
 )
 
 func NewConfig() (*Config, error) {
