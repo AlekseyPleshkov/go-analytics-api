@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/AlekseyPleshkov/${{ env.PROJECT }}:latest
+          tags: ghcr.io/alekseypleshkov/${{ env.PROJECT }}:latest
