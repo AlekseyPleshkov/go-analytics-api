@@ -1,0 +1,23 @@
+# Just for example :)
+version: "3.7"
+
+networks:
+  api:
+    name: api
+    driver: bridge
+  postgres:
+    name: postgres
+    driver: bridge
+
+services:
+  analytics:
+    image: "ghcr.io/alekseypleshkov/go-analytics-api:latest"
+    container_name: analytics
+    restart: "on-failure:3"
+    build:
+      context: .
+    volumes:
+      - "~/config.yml:/config.yml"
+    networks:
+      - api
+      - postgres
